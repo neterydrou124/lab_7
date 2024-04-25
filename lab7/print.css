@@ -1,0 +1,27 @@
+@media print {
+    body, html {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', Georgia, Palatino;
+    }
+    
+    .header, .footer, .non-printable {
+      display: none; /* Hide elements not needed for printing */
+    }
+  
+    .content {
+      width: 100%;
+      background: none; /* Remove backgrounds */
+      color: black; /* Set text color to black */
+    }
+  
+    a[href]:after {
+      content: " (" attr(href) ")"; /* Show URLs after links */
+    }
+  
+    @page {
+      margin: 50px; /* Set page margins for printing */
+    }
+  }
+  
